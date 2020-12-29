@@ -37,7 +37,7 @@ export default (props: InputProps) => {
           </Picker>
         ) : (
           <TextInput
-            style={style.inputText}
+            style={[style.inputText, {marginLeft: 20}]}
             keyboardType="number-pad"
             onChangeText={props.onValueChange}
             value={props.value && props.value.toString()}

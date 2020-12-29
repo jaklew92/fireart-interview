@@ -11,16 +11,20 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		15DF64419657EE17133DA464 /* libPods-fireartInterviewJaklew.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C4D178F1D47CD39D8045C9 /* libPods-fireartInterviewJaklew.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* fireartInterviewJaklewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* fireartInterviewJaklewTests.m */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		778B146549494684BA170BA2 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44465EFDF26423E93934AE5 /* Quicksand-Bold.ttf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		99FF8596338942C29E96679E /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7396074F2EC54FF49374D101 /* Quicksand-Light.ttf */; };
-		CEA0A3F30C4C4CA186FCF1C4 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADE8D7A4EA0E49C19D309F0F /* Quicksand-Medium.ttf */; };
 		BB84500C1DBE423A938C9FB6 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B4AB7F106BC4B1E992F8789 /* Quicksand-Regular.ttf */; };
+		CEA0A3F30C4C4CA186FCF1C4 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADE8D7A4EA0E49C19D309F0F /* Quicksand-Medium.ttf */; };
+		E662D5FA840F044BC7E280A2 /* libPods-fireartInterviewJaklew-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD7B90B1695C7FEFB7C8FE /* libPods-fireartInterviewJaklew-tvOS.a */; };
 		EDF0E9D4ADA64DBC8B3C77CE /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B1272E26B404B9DA375508B /* Quicksand-SemiBold.ttf */; };
+		F1B42EE8751E05FD03CEDB7A /* libPods-fireartInterviewJaklew-fireartInterviewJaklewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D3E38513A715220BBAA2E58 /* libPods-fireartInterviewJaklew-fireartInterviewJaklewTests.a */; };
+		F667BDD3DE7D0F2DBCB70D3F /* libPods-fireartInterviewJaklew-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27800897835D1B0C29C21B01 /* libPods-fireartInterviewJaklew-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,16 +55,28 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = fireartInterviewJaklew/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = fireartInterviewJaklew/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = fireartInterviewJaklew/main.m; sourceTree = "<group>"; };
+		1B1272E26B404B9DA375508B /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-SemiBold.ttf"; path = "../assets/fonts/Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		1C6405413CE2E39534038C06 /* Pods-fireartInterviewJaklew-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireartInterviewJaklew-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-fireartInterviewJaklew-tvOSTests/Pods-fireartInterviewJaklew-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		27800897835D1B0C29C21B01 /* libPods-fireartInterviewJaklew-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fireartInterviewJaklew-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* fireartInterviewJaklew-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fireartInterviewJaklew-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* fireartInterviewJaklew-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fireartInterviewJaklew-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCBC31C67D10395EB2EC63C /* Pods-fireartInterviewJaklew-fireartInterviewJaklewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireartInterviewJaklew-fireartInterviewJaklewTests.debug.xcconfig"; path = "Target Support Files/Pods-fireartInterviewJaklew-fireartInterviewJaklewTests/Pods-fireartInterviewJaklew-fireartInterviewJaklewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3CF503ED370897DA38992220 /* Pods-fireartInterviewJaklew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireartInterviewJaklew.debug.xcconfig"; path = "Target Support Files/Pods-fireartInterviewJaklew/Pods-fireartInterviewJaklew.debug.xcconfig"; sourceTree = "<group>"; };
+		40FC9ADFDA77BC672C7743B7 /* Pods-fireartInterviewJaklew-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireartInterviewJaklew-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-fireartInterviewJaklew-tvOSTests/Pods-fireartInterviewJaklew-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		45C4D178F1D47CD39D8045C9 /* libPods-fireartInterviewJaklew.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fireartInterviewJaklew.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51D2C147D73A669D2F47AA85 /* Pods-fireartInterviewJaklew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireartInterviewJaklew.release.xcconfig"; path = "Target Support Files/Pods-fireartInterviewJaklew/Pods-fireartInterviewJaklew.release.xcconfig"; sourceTree = "<group>"; };
+		5D3E38513A715220BBAA2E58 /* libPods-fireartInterviewJaklew-fireartInterviewJaklewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fireartInterviewJaklew-fireartInterviewJaklewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63DD7B90B1695C7FEFB7C8FE /* libPods-fireartInterviewJaklew-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fireartInterviewJaklew-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7396074F2EC54FF49374D101 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Light.ttf"; path = "../assets/fonts/Quicksand-Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = fireartInterviewJaklew/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8853B422112E33F236031D10 /* Pods-fireartInterviewJaklew-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireartInterviewJaklew-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-fireartInterviewJaklew-tvOS/Pods-fireartInterviewJaklew-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8B4AB7F106BC4B1E992F8789 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Regular.ttf"; path = "../assets/fonts/Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		A44465EFDF26423E93934AE5 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Bold.ttf"; path = "../assets/fonts/Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		ADE8D7A4EA0E49C19D309F0F /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Medium.ttf"; path = "../assets/fonts/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		DE1E022D45FC23C1A54019EA /* Pods-fireartInterviewJaklew-fireartInterviewJaklewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireartInterviewJaklew-fireartInterviewJaklewTests.release.xcconfig"; path = "Target Support Files/Pods-fireartInterviewJaklew-fireartInterviewJaklewTests/Pods-fireartInterviewJaklew-fireartInterviewJaklewTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		A44465EFDF26423E93934AE5 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; name = "Quicksand-Bold.ttf"; path = "../assets/fonts/Quicksand-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7396074F2EC54FF49374D101 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; name = "Quicksand-Light.ttf"; path = "../assets/fonts/Quicksand-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		ADE8D7A4EA0E49C19D309F0F /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; name = "Quicksand-Medium.ttf"; path = "../assets/fonts/Quicksand-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8B4AB7F106BC4B1E992F8789 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; name = "Quicksand-Regular.ttf"; path = "../assets/fonts/Quicksand-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1B1272E26B404B9DA375508B /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; name = "Quicksand-SemiBold.ttf"; path = "../assets/fonts/Quicksand-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FB379B11C664417D1D69C06C /* Pods-fireartInterviewJaklew-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireartInterviewJaklew-tvOS.release.xcconfig"; path = "Target Support Files/Pods-fireartInterviewJaklew-tvOS/Pods-fireartInterviewJaklew-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1B42EE8751E05FD03CEDB7A /* libPods-fireartInterviewJaklew-fireartInterviewJaklewTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15DF64419657EE17133DA464 /* libPods-fireartInterviewJaklew.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E662D5FA840F044BC7E280A2 /* libPods-fireartInterviewJaklew-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F667BDD3DE7D0F2DBCB70D3F /* libPods-fireartInterviewJaklew-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,8 +151,41 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
+				45C4D178F1D47CD39D8045C9 /* libPods-fireartInterviewJaklew.a */,
+				5D3E38513A715220BBAA2E58 /* libPods-fireartInterviewJaklew-fireartInterviewJaklewTests.a */,
+				63DD7B90B1695C7FEFB7C8FE /* libPods-fireartInterviewJaklew-tvOS.a */,
+				27800897835D1B0C29C21B01 /* libPods-fireartInterviewJaklew-tvOSTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DC500F4A5D21916E4E91045 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CF503ED370897DA38992220 /* Pods-fireartInterviewJaklew.debug.xcconfig */,
+				51D2C147D73A669D2F47AA85 /* Pods-fireartInterviewJaklew.release.xcconfig */,
+				3BCBC31C67D10395EB2EC63C /* Pods-fireartInterviewJaklew-fireartInterviewJaklewTests.debug.xcconfig */,
+				DE1E022D45FC23C1A54019EA /* Pods-fireartInterviewJaklew-fireartInterviewJaklewTests.release.xcconfig */,
+				8853B422112E33F236031D10 /* Pods-fireartInterviewJaklew-tvOS.debug.xcconfig */,
+				FB379B11C664417D1D69C06C /* Pods-fireartInterviewJaklew-tvOS.release.xcconfig */,
+				1C6405413CE2E39534038C06 /* Pods-fireartInterviewJaklew-tvOSTests.debug.xcconfig */,
+				40FC9ADFDA77BC672C7743B7 /* Pods-fireartInterviewJaklew-tvOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		70657F5280A84F1FBEB7B9C6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A44465EFDF26423E93934AE5 /* Quicksand-Bold.ttf */,
+				7396074F2EC54FF49374D101 /* Quicksand-Light.ttf */,
+				ADE8D7A4EA0E49C19D309F0F /* Quicksand-Medium.ttf */,
+				8B4AB7F106BC4B1E992F8789 /* Quicksand-Regular.ttf */,
+				1B1272E26B404B9DA375508B /* Quicksand-SemiBold.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -151,6 +204,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				70657F5280A84F1FBEB7B9C6 /* Resources */,
+				3DC500F4A5D21916E4E91045 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -168,19 +222,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		70657F5280A84F1FBEB7B9C6 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				A44465EFDF26423E93934AE5 /* Quicksand-Bold.ttf */,
-				7396074F2EC54FF49374D101 /* Quicksand-Light.ttf */,
-				ADE8D7A4EA0E49C19D309F0F /* Quicksand-Medium.ttf */,
-				8B4AB7F106BC4B1E992F8789 /* Quicksand-Regular.ttf */,
-				1B1272E26B404B9DA375508B /* Quicksand-SemiBold.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "fireartInterviewJaklewTests" */;
 			buildPhases = (
+				617B736E1D26F8DFB98979EA /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				2D09DF7A0FD588350D731B3D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,11 +249,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "fireartInterviewJaklew" */;
 			buildPhases = (
+				1B7469757EC7299DD8CE8C96 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				7AED04A1E2F0A512A224972F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,6 +270,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "fireartInterviewJaklew-tvOS" */;
 			buildPhases = (
+				D5289007B627F432C447D664 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -244,6 +290,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "fireartInterviewJaklew-tvOSTests" */;
 			buildPhases = (
+				21CF57FF59D4DF12DC343D27 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -359,6 +406,50 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		1B7469757EC7299DD8CE8C96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fireartInterviewJaklew-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21CF57FF59D4DF12DC343D27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fireartInterviewJaklew-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,6 +463,86 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		2D09DF7A0FD588350D731B3D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fireartInterviewJaklew-fireartInterviewJaklewTests/Pods-fireartInterviewJaklew-fireartInterviewJaklewTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fireartInterviewJaklew-fireartInterviewJaklewTests/Pods-fireartInterviewJaklew-fireartInterviewJaklewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		617B736E1D26F8DFB98979EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fireartInterviewJaklew-fireartInterviewJaklewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AED04A1E2F0A512A224972F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fireartInterviewJaklew/Pods-fireartInterviewJaklew-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fireartInterviewJaklew/Pods-fireartInterviewJaklew-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5289007B627F432C447D664 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fireartInterviewJaklew-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -466,6 +637,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BCBC31C67D10395EB2EC63C /* Pods-fireartInterviewJaklew-fireartInterviewJaklewTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -488,6 +660,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE1E022D45FC23C1A54019EA /* Pods-fireartInterviewJaklew-fireartInterviewJaklewTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -507,6 +680,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CF503ED370897DA38992220 /* Pods-fireartInterviewJaklew.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -529,6 +703,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51D2C147D73A669D2F47AA85 /* Pods-fireartInterviewJaklew.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -549,6 +724,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8853B422112E33F236031D10 /* Pods-fireartInterviewJaklew-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -576,6 +752,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB379B11C664417D1D69C06C /* Pods-fireartInterviewJaklew-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -603,6 +780,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C6405413CE2E39534038C06 /* Pods-fireartInterviewJaklew-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -629,6 +807,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40FC9ADFDA77BC672C7743B7 /* Pods-fireartInterviewJaklew-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;

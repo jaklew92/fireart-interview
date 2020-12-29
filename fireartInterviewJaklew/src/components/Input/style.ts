@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {textStyle} from '../../const';
 import { textStyles } from '../../const/style';
 
@@ -13,6 +13,10 @@ export default StyleSheet.create({
     borderRadius: 14,
     marginBottom: 30,
     width: 320,
+    maxHeight: 100,
+    minHeight: 50,
+    alignContent: 'center',
+    justifyContent: 'center'
   },
   text: {
     ...textStyles.medium,
@@ -22,5 +26,10 @@ export default StyleSheet.create({
   inputText: {
     ...textStyles.medium,
     color: 'white',
+    ...Platform.select({
+      android: {
+        marginLeft: 10,
+      },
+    })
   },
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Keyboard, Animated, Alert} from 'react-native';
+import {View, Text, Keyboard, Animated, Alert, Platform} from 'react-native';
 import {connect} from 'react-redux';
 import {
   requestQuestions,
@@ -17,6 +17,7 @@ interface WelcomeScreenState {
   difficulty: 'easy' | 'hard';
   amount: number;
   keyboardShown: boolean;
+  keyboardHeight: Animated.Value
 }
 
 interface WelcomeScreenProps {
@@ -29,14 +30,13 @@ interface WelcomeScreenProps {
 }
 
 class Welcome extends React.Component<WelcomeScreenProps, WelcomeScreenState> {
-  private keyboardHeight: Animated.Value;
   private keyboardWillShowSub: any;
   private keyboardWillHideSub: any;
 
   constructor(props: WelcomeScreenProps) {
     super(props);
-    this.keyboardHeight = new Animated.Value(0);
     this.state = {
+      keyboardHeight: new Animated.Value(0),
       keyboardShown: false,
       difficulty: 'easy',
       amount: 8,
@@ -44,12 +44,23 @@ class Welcome extends React.Component<WelcomeScreenProps, WelcomeScreenState> {
   }
 
   componentDidMount() {
+    const showListener: 'keyboardWillShow' | 'keyboardDidShow' = Platform.select({
+      ios: 'keyboardWillShow',
+      android: 'keyboardDidShow',
+      default: 'keyboardWillShow'
+    });
+    const hideListener: 'keyboardWillHide' | 'keyboardDidHide' = Platform.select({
+      ios: 'keyboardWillHide',
+      android: 'keyboardDidHide',
+      default: 'keyboardWillHide'
+    });
+
     this.keyboardWillShowSub = Keyboard.addListener(
-      'keyboardDidShow',
+      showListener,
       this.keyboardWillShow,
     );
     this.keyboardWillHideSub = Keyboard.addListener(
-      'keyboardDidHide',
+      hideListener,
       this.keyboardWillHide,
     );
   }
@@ -68,28 +79,28 @@ class Welcome extends React.Component<WelcomeScreenProps, WelcomeScreenState> {
         {text: 'Ok', onPress: () => clear()},
       ]);
     }
+    console.log(this.state.keyboardHeight);
   }
 
   keyboardWillShow = (event) => {
-    Animated.parallel([
-      Animated.timing(this.keyboardHeight, {
+    console.log('keyboard shown')
+    let {keyboardHeight} = this.state;
+      Animated.timing(keyboardHeight, {
         duration: event.duration,
         toValue: event.endCoordinates.height,
         useNativeDriver: false,
-      }),
-    ]).start();
-    this.setState({keyboardShown: true});
+      }).start();
+    this.setState({keyboardShown: true, keyboardHeight});
   };
 
   keyboardWillHide = (event) => {
-    Animated.parallel([
-      Animated.timing(this.keyboardHeight, {
+    let {keyboardHeight} = this.state;
+      Animated.timing(keyboardHeight, {
         duration: event.duration,
         toValue: 0,
         useNativeDriver: false,
-      }),
-    ]).start();
-    this.setState({keyboardShown: false});
+      }).start();
+    this.setState({keyboardShown: false, keyboardHeight});
   };
 
   setDifficulty = (difficulty: 'easy' | 'hard') => this.setState({difficulty});
@@ -98,9 +109,9 @@ class Welcome extends React.Component<WelcomeScreenProps, WelcomeScreenState> {
 
   render() {
     return (
-      <View style={style.container}>
+      <Animated.View style={[style.container, Platform.OS === 'ios' ? {paddingBottom: this.state.keyboardHeight} : null]}>
         <Animated.ScrollView
-          style={[style.container, {paddingBottom: this.keyboardHeight}]}
+          style={[style.container, Platform.OS === 'android' ? {paddingBottom: this.state.keyboardHeight} : null]}
           contentContainerStyle={{alignItems: 'center'}}>
           <Text style={style.welcomeText}>Welcome to the</Text>
           <WelcomeSvg style={style.triviaImage} />
@@ -128,7 +139,7 @@ class Welcome extends React.Component<WelcomeScreenProps, WelcomeScreenState> {
         <BubbleTopRight style={style.bubbleTopRight} />
         <BubbleBottomLeft style={style.bubbleBottomLeft} />
         <BubbleBottomRight style={style.bubbleBottomRight} />
-      </View>
+      </Animated.View>
     );
   }
 }
