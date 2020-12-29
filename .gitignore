@@ -19,7 +19,8 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-
+*/ios/Pods/
+*/ios/Podfile.lock
 # Android/IntelliJ
 #
 build/
