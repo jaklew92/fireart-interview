@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Picker, TextInput} from 'react-native';
+import {View, Text, Picker, TextInput, ViewStyle} from 'react-native';
 import Cup from '../../../assets/cup.svg';
 import Star from '../../../assets/amount.svg';
 import style from './style';
@@ -9,6 +9,7 @@ type InputType = 'difficulty' | 'amount';
 interface InputProps {
   type: InputType;
   value: 'easy' | 'hard' | number;
+  style: ViewStyle;
   onValueChange: (value: any) => void;
 }
 
@@ -23,7 +24,7 @@ const renderHeader = (type: InputType) => {
 
 export default (props: InputProps) => {
   return (
-    <View>
+    <View style={props.style} >
       {renderHeader(props.type)}
       <View style={style.inputContainer}>
         {props.type === 'difficulty' ? (

@@ -7,6 +7,7 @@ const button: ViewStyle = {
   height: 65,
   alignItems: 'center',
   justifyContent: 'center',
+  elevation: 1,
 };
 
 const text: TextStyle = {

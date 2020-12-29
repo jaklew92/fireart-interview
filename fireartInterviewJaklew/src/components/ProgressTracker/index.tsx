@@ -7,6 +7,7 @@ import style from './style';
 export interface TrackerProps {
   total: number;
   current: number;
+  score?: boolean;
 }
 
 export default (props: TrackerProps) => {

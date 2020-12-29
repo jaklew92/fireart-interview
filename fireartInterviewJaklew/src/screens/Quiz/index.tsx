@@ -1,18 +1,26 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {answer} from '../../redux/actions/questions';
 import {View, Text} from 'react-native';
 import {Button, ProgressTracker} from '../../components';
+import BubbleTopLeft from '../../../assets/bubble-questionScreenTopLeft.svg';
+import BubbleTopRight from '../../../assets/bubble-questionScreenTopRight.svg';
+import BubbleBottomLeft from '../../../assets/bubble-questionScreenBottomLeft.svg';
+import BubbleBottomRight from '../../../assets/bubble-questionScreenBottomRight.svg';
+import BubbleMiddleRight from '../../../assets/bubble-questionScreenMiddleRight.svg';
 import style from './style';
+import {ThemeProvider} from '@react-navigation/native';
 
 interface QuizProps {
   questions: Array<any> | null;
-  answer: (payload: boolean) => void;
+  answer: (payload: any) => void;
 }
 
 interface QuizState {
   currentQuestion: number;
 }
 
-export default class Quiz extends React.Component<QuizProps, QuizState> {
+class Quiz extends React.Component<QuizProps, QuizState> {
   constructor(props: QuizProps) {
     super(props);
     this.state = {
@@ -20,24 +28,83 @@ export default class Quiz extends React.Component<QuizProps, QuizState> {
     };
   }
 
-  private answer(how: boolean){
+  get questionTitle() {
+    const {questions} = this.props;
+    const {currentQuestion} = this.state;
+    return (
+      questions &&
+      questions[currentQuestion - 1] &&
+      questions[currentQuestion - 1].category
+    );
+  }
+
+  get questionText() {
+    const {questions} = this.props;
+    const {currentQuestion} = this.state;
+    return (
+      questions &&
+      questions[currentQuestion - 1] &&
+      questions[currentQuestion - 1].question
+        .replace(/&quot;/g, '"')
+        .replace(/&#039;/g, "'")
+    );
+  }
+
+  private answer(how: boolean) {
+    const {answer: putInRedux} = this.props;
+    putInRedux({answer: how, id: this.state.currentQuestion - 1});
     this.setState({currentQuestion: this.state.currentQuestion + 1});
   }
-  
+
+  componentDidUpdate() {
+    if (this.state.currentQuestion > this.props.questions?.length) {
+      this.props.navigation.navigate('QuizResults');
+    }
+  }
+
   render() {
+    if (this.state.currentQuestion > this.props.questions?.length) {
+      return null;
+    }
     return (
       <View style={style.container}>
-        
-        <ProgressTracker current={this.state.currentQuestion} total={10} />
-        <Button
-          type="true"
-          onPress={() => this.answer(true)}
-        />
-        <Button
-          type="false"
-          onPress={() => this.answer(false)}
-        />
+        <Text style={style.title} numberOfLines={2} lineBreakMode="middle">
+          {this.questionTitle}
+        </Text>
+        <View
+          style={{
+            marginLeft: 35,
+            marginVertical: 15,
+            alignSelf: 'center',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <ProgressTracker
+            current={this.state.currentQuestion}
+            total={this.props.questions?.length}
+          />
+          <Text style={style.question}>{this.questionText}</Text>
+        </View>
+        <View style={{marginTop: 50}}>
+          <Button type="true" onPress={() => this.answer(true)} />
+          <Button type="false" onPress={() => this.answer(false)} />
+        </View>
+        <BubbleTopLeft style={style.bubbleTopLeft} />
+        <BubbleMiddleRight style={style.bubbleMiddleRight} />
+        <BubbleTopRight style={style.bubbleTopRight} />
+        <BubbleBottomLeft style={style.bubbleBottomLeft} />
+        <BubbleBottomRight style={style.bubbleBottomRight} />
       </View>
     );
   }
 }
+
+const mapStateToProps = ({questions}) => ({
+  questions: questions.questions,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  answer: (payload) => dispatch(answer(payload)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Quiz);

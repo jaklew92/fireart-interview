@@ -1,11 +1,11 @@
 import {combineReducers} from 'redux';
 import * as actionType from '../const/actionTypes';
 
-type Question = {
+export type Question = {
   id: number;
   category: string;
   question: string;
-  correctAnswer: boolean;
+  correct_answer: boolean;
   givenAnswer: boolean;
 };
 
@@ -26,25 +26,6 @@ const initialState: QuestionsStore = {
   requestError: false,
   requestSuccess: false,
   questions: null,
-};
-
-const mapQuestionsWithAnswer = (
-  questions: Array<Question> | null,
-  answer: boolean,
-  id: number,
-) => {
-  return (
-    questions &&
-    questions.map((q) => {
-      if (q.id === id) {
-        return {
-          ...q,
-          givenAnswer: answer,
-        };
-      }
-      return q;
-    })
-  );
 };
 
 const questionsReducer = (
@@ -82,9 +63,25 @@ const questionsReducer = (
     };
   } else if (action.type === actionType.ANSWER) {
     const {id, answer} = action.payload;
+    const {questions} = state;
+    const question = questions && questions[id];
+    if (questions && questions[id] !== null) {
+      questions[id] = {
+        ...question,
+        givenAnswer: answer,
+      };
+    }
+
+    console.log(
+      'answering. state: ' +
+        JSON.stringify({
+          ...state,
+          questions: questions,
+        }),
+    );
     return {
       ...state,
-      questions: mapQuestionsWithAnswer(state.questions, answer, id),
+      questions: questions,
     };
   } else if (action.type === actionType.CLEAR) {
     return initialState;

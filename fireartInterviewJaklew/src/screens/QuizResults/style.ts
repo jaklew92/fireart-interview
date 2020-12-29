@@ -1,18 +1,20 @@
 import {StyleSheet} from 'react-native';
-import {textStyles, fontColors} from '../../const/style';
+import {textStyles, fontColors, COLOR_MAIN} from '../../const/style';
 
 export default StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: COLOR_MAIN,
   },
   title: {
     ...textStyles.big,
-    color: fontColors.blue,
+    color: 'white',
     fontFamily: 'Quicksand-Bold',
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 20,
+    marginHorizontal: 10,
   },
   question: {
     ...textStyles.big,
@@ -32,7 +34,7 @@ export default StyleSheet.create({
   },
   bubbleBottomLeft: {
     position: 'absolute',
-    bottom: 0,
+    bottom: 200,
     left: 0,
   },
   bubbleBottomRight: {
@@ -40,9 +42,14 @@ export default StyleSheet.create({
     bottom: 0,
     right: 0,
   },
-  bubbleMiddleRight: {
+  bubbleMiddleTopRight: {
     position: 'absolute',
     bottom: 90,
     right: 0,
   },
+  bubbleMiddleBottomRight: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+  }
 });

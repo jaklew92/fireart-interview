@@ -1,5 +1,10 @@
 import React from 'react';
-import {TouchableOpacity, Text, ActivityIndicator} from 'react-native';
+import {
+  TouchableOpacity,
+  Text,
+  ActivityIndicator,
+  ViewStyle,
+} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import style from './style';
 
@@ -7,6 +12,7 @@ type ButtonType = 'navigation' | 'true' | 'false';
 
 interface ButtonProps {
   type: ButtonType;
+  style?: ViewStyle;
   title?: string;
   loading?: boolean;
   onPress: () => void;
@@ -63,7 +69,9 @@ const renderButton = (type: ButtonType, title?: string, loading?: boolean) => {
 };
 
 export default (props: ButtonProps) => (
-  <TouchableOpacity style={getButtonStyle(props.type)} onPress={props.onPress}>
+  <TouchableOpacity
+    style={[props.style, getButtonStyle(props.type)]}
+    onPress={props.onPress}>
     {renderButton(props.type, props.title, props.loading)}
   </TouchableOpacity>
 );

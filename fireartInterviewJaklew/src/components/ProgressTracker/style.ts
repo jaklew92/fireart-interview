@@ -22,6 +22,7 @@ export default StyleSheet.create({
     color: fontColors.blue,
   },
   lineFilled: {
+    borderRadius: 5,
     backgroundColor: colors.salmon,
     height: LINE_HEIGHT,
     position: 'absolute',
@@ -29,6 +30,7 @@ export default StyleSheet.create({
     left: 0,
   },
   lineEmpty: {
+    borderRadius: 5,
     backgroundColor: colors.grey,
     height: LINE_HEIGHT,
     position: 'absolute',
@@ -38,5 +40,8 @@ export default StyleSheet.create({
   trackerContainer: {
     marginBottom: 5,
     alignSelf: 'flex-start',
+  },
+  tracker: {
+    marginTop: 10,
   },
 });

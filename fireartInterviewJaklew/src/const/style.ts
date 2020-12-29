@@ -3,6 +3,7 @@ export const COLOR_MAIN = '#4751C0';
 export const colors = {
   salmon: '#FF7878',
   grey: '#DBDEFF',
+  orange: '#FFDBDB',
 };
 
 export const fontColors = {

@@ -11,7 +11,7 @@ const calculateProgress = (props: TrackerProps) => {
 
 export default (props: TrackerProps) => {
   return (
-    <View>
+    <View style={style.tracker}>
       <View style={[style.lineEmpty, {width: LINE_LENGTH}]} />
       <View style={[style.lineFilled, {width: calculateProgress(props)}]} />
     </View>

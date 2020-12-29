@@ -17,6 +17,7 @@ function* fetchQuestions() {
         yield put(requestQuestionsError());
       }
     } catch (e) {
+      console.log('error in saga: ' + e);
       yield put(requestQuestionsError());
     }
   }
