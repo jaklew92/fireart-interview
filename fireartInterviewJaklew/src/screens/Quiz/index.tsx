@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {answer} from '../../redux/actions/questions';
 import {View, Text} from 'react-native';
-import {Button, ProgressTracker} from '../../components';
+import {Button, ProgressTracker, Exit} from '../../components';
 import BubbleTopLeft from '../../../assets/bubble-questionScreenTopLeft.svg';
 import BubbleTopRight from '../../../assets/bubble-questionScreenTopRight.svg';
 import BubbleBottomLeft from '../../../assets/bubble-questionScreenBottomLeft.svg';
@@ -67,6 +67,7 @@ class Quiz extends React.Component<QuizProps, QuizState> {
     }
     return (
       <View style={style.container}>
+        <Exit onPress={() => this.props.navigation.navigate('Welcome')} style={style.exit}/>
         <Text style={style.title} numberOfLines={2} lineBreakMode="middle">
           {this.questionTitle}
         </Text>

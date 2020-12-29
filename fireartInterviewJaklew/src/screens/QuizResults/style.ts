@@ -64,4 +64,9 @@ export default StyleSheet.create({
   button: {
     marginVertical: 20,
   },
+  exit: {
+    position: 'absolute',
+    top: 40,
+    right: 40,
+  },
 });

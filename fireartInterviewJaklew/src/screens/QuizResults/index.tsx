@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import {connect} from 'react-redux';
-import {Button, AnswerList, ScoreStars, Numbers} from '../../components';
+import {Button, AnswerList, ScoreStars, Numbers, Exit} from '../../components';
 import {Question} from '../../redux/reducers/questions';
 import {clear} from '../../redux/actions/questions';
 import Person from '../../../assets/person.svg';
@@ -62,6 +62,7 @@ class QuizResults extends React.Component<QuizResultsProps> {
         <BubbleBottomRight style={style.bubbleBottomRight} />
         <BubbleMiddleTopRight style={style.bubbleMiddleTopRight} />
         <BubbleMiddleBottomRight style={style.bubbleMiddleBottomRight} />
+        <Exit white onPress={() => this.props.navigation.navigate('Welcome')} style={style.exit}/>
         <View style={style.topContainer}>
           <Person style={style.person} />
           <Text style={style.title}>You scored</Text>

@@ -50,9 +50,13 @@ export default StyleSheet.create({
   },
   topContainer: {
     marginLeft: 35,
-    marginVertical: 15,
     alignSelf: 'center',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
+  },
+  exit: {
+    position: 'absolute',
+    top: 40,
+    right: 40,
   },
 });
