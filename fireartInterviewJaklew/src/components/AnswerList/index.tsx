@@ -1,6 +1,5 @@
 import React from 'react';
 import {FlatList} from 'react-native';
-import {Question} from '../../redux/reducers/questions';
 import Item from './item';
 
 interface AnswerListProps {

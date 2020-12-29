@@ -45,4 +45,14 @@ export default StyleSheet.create({
     bottom: 90,
     right: 0,
   },
+  buttonContainer: {
+    marginTop: 50,
+  },
+  topContainer: {
+    marginLeft: 35,
+    marginVertical: 15,
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });

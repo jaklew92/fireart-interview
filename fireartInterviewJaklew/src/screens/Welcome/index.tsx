@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Keyboard, Animated, Alert, Platform} from 'react-native';
+import {Text, Keyboard, Animated, Alert, Platform} from 'react-native';
 import {connect} from 'react-redux';
 import {
   requestQuestions,
@@ -17,7 +17,7 @@ interface WelcomeScreenState {
   difficulty: 'easy' | 'hard';
   amount: number;
   keyboardShown: boolean;
-  keyboardHeight: Animated.Value
+  keyboardHeight: Animated.Value;
 }
 
 interface WelcomeScreenProps {
@@ -44,15 +44,19 @@ class Welcome extends React.Component<WelcomeScreenProps, WelcomeScreenState> {
   }
 
   componentDidMount() {
-    const showListener: 'keyboardWillShow' | 'keyboardDidShow' = Platform.select({
+    const showListener:
+      | 'keyboardWillShow'
+      | 'keyboardDidShow' = Platform.select({
       ios: 'keyboardWillShow',
       android: 'keyboardDidShow',
-      default: 'keyboardWillShow'
+      default: 'keyboardWillShow',
     });
-    const hideListener: 'keyboardWillHide' | 'keyboardDidHide' = Platform.select({
+    const hideListener:
+      | 'keyboardWillHide'
+      | 'keyboardDidHide' = Platform.select({
       ios: 'keyboardWillHide',
       android: 'keyboardDidHide',
-      default: 'keyboardWillHide'
+      default: 'keyboardWillHide',
     });
 
     this.keyboardWillShowSub = Keyboard.addListener(
@@ -82,37 +86,47 @@ class Welcome extends React.Component<WelcomeScreenProps, WelcomeScreenState> {
     console.log(this.state.keyboardHeight);
   }
 
-  keyboardWillShow = (event) => {
-    console.log('keyboard shown')
+  private keyboardWillShow = (event) => {
     let {keyboardHeight} = this.state;
-      Animated.timing(keyboardHeight, {
-        duration: event.duration,
-        toValue: event.endCoordinates.height,
-        useNativeDriver: false,
-      }).start();
+    Animated.timing(keyboardHeight, {
+      duration: event.duration,
+      toValue: event.endCoordinates.height,
+      useNativeDriver: false,
+    }).start();
     this.setState({keyboardShown: true, keyboardHeight});
   };
 
-  keyboardWillHide = (event) => {
+  private keyboardWillHide = (event) => {
     let {keyboardHeight} = this.state;
-      Animated.timing(keyboardHeight, {
-        duration: event.duration,
-        toValue: 0,
-        useNativeDriver: false,
-      }).start();
+    Animated.timing(keyboardHeight, {
+      duration: event.duration,
+      toValue: 0,
+      useNativeDriver: false,
+    }).start();
     this.setState({keyboardShown: false, keyboardHeight});
   };
 
-  setDifficulty = (difficulty: 'easy' | 'hard') => this.setState({difficulty});
+  private setDifficulty = (difficulty: 'easy' | 'hard') => this.setState({difficulty});
 
-  setAmount = (amount: number) => this.setState({amount});
+  private setAmount = (amount: number) => this.setState({amount});
 
   render() {
     return (
-      <Animated.View style={[style.container, Platform.OS === 'ios' ? {paddingBottom: this.state.keyboardHeight} : null]}>
+      <Animated.View
+        style={[
+          style.container,
+          Platform.OS === 'ios'
+            ? {paddingBottom: this.state.keyboardHeight}
+            : null,
+        ]}>
         <Animated.ScrollView
-          style={[style.container, Platform.OS === 'android' ? {paddingBottom: this.state.keyboardHeight} : null]}
-          contentContainerStyle={{alignItems: 'center'}}>
+          style={[
+            style.container,
+            Platform.OS === 'android'
+              ? {paddingBottom: this.state.keyboardHeight}
+              : null,
+          ]}
+          contentContainerStyle={style.contentContainer}>
           <Text style={style.welcomeText}>Welcome to the</Text>
           <WelcomeSvg style={style.triviaImage} />
           <Input
@@ -150,7 +164,7 @@ const mapStateToProps = ({questions}) => ({
   questionsSuccess: questions.requestSuccess,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   submit: (payload: any) => dispatch(requestQuestions(payload)),
   clear: () => dispatch(requestQuestionsClear()),
 });

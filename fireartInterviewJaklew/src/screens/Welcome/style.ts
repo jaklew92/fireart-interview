@@ -8,7 +8,6 @@ export default StyleSheet.create({
   },
   contentContainer:{
     alignItems: 'center',
-    flex: 1,
   },
   welcomeText: {
     marginTop: 125,

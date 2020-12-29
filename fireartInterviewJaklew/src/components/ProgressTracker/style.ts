@@ -44,4 +44,7 @@ export default StyleSheet.create({
   tracker: {
     marginTop: 10,
   },
+  whiteText: {
+    color: 'white',
+  },
 });

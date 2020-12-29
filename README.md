@@ -21,5 +21,5 @@ commands in the aforementioned directory.
 
 ##
 Assumptions made during development of the project:
-1. A few functionalities (navigation, SVG loading, linear gradient on the buttons) were impossible to do in a reasonable amount of time. 3rd party libs were used to achieve these goals.
+1. A few functionalities (navigation, SVG loading, linear gradient on the buttons) were impossible to do from scratch in a reasonable amount of time. 3rd party libs were used to achieve these goals.
 2. It was assumed that on the 3rd screen, the number of stars is constant (10).

@@ -19,7 +19,7 @@ interface QuizResultsProps {
 }
 
 class QuizResults extends React.Component<QuizResultsProps> {
-  get mappedQuestions() {
+  private get mappedQuestions() {
     return (
       this.props.questions &&
       this.props.questions.map((q) => {
@@ -34,15 +34,21 @@ class QuizResults extends React.Component<QuizResultsProps> {
     );
   }
 
-  get right() {
-    return this.mappedQuestions && this.mappedQuestions.filter((q) => q.right === true).length;
+  private get right() {
+    return (
+      this.mappedQuestions &&
+      this.mappedQuestions.filter((q) => q.right === true).length
+    );
   }
 
-  get wrong() {
-    return this.mappedQuestions && this.mappedQuestions.filter((q) => q.right === false).length;
+  private get wrong() {
+    return (
+      this.mappedQuestions &&
+      this.mappedQuestions.filter((q) => q.right === false).length
+    );
   }
 
-  playAgain() {
+  private playAgain() {
     this.props.navigation.navigate('Welcome');
     this.props.clear();
   }
@@ -50,20 +56,25 @@ class QuizResults extends React.Component<QuizResultsProps> {
   render() {
     return (
       <View style={style.container}>
-      <BubbleTopLeft style={style.bubbleTopLeft} />
-      <BubbleTopRight style={style.bubbleTopRight} />
-      <BubbleBottomLeft style={style.bubbleBottomLeft} />
-      <BubbleBottomRight style={style.bubbleBottomRight} />
-      <BubbleMiddleTopRight style={style.bubbleMiddleTopRight} />
-      <BubbleMiddleBottomRight style={style.bubbleMiddleBottomRight} />
-        <View style={{flexDirection: 'row', marginTop: 30, marginBottom: 15}}>
-          <Person style={{backgroundColor: 'white', borderRadius: 20}} />
+        <BubbleTopLeft style={style.bubbleTopLeft} />
+        <BubbleTopRight style={style.bubbleTopRight} />
+        <BubbleBottomLeft style={style.bubbleBottomLeft} />
+        <BubbleBottomRight style={style.bubbleBottomRight} />
+        <BubbleMiddleTopRight style={style.bubbleMiddleTopRight} />
+        <BubbleMiddleBottomRight style={style.bubbleMiddleBottomRight} />
+        <View style={style.topContainer}>
+          <Person style={style.person} />
           <Text style={style.title}>You scored</Text>
-          <Numbers score current={this.right} total={this.right+this.wrong}/>
+          <Numbers score current={this.right} total={this.right + this.wrong} />
         </View>
         <ScoreStars right={this.right} wrong={this.wrong} />
         <AnswerList questions={this.mappedQuestions} />
-        <Button style={{marginVertical: 20}} type='navigation' title='play again' onPress={() => this.playAgain()} />
+        <Button
+          style={style.button}
+          type="navigation"
+          title="play again"
+          onPress={() => this.playAgain()}
+        />
       </View>
     );
   }
@@ -73,7 +84,7 @@ const mapStateToProps = ({questions}) => ({
   questions: questions.questions,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   clear: () => dispatch(clear()),
 });
 

@@ -51,5 +51,17 @@ export default StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     right: 0,
-  }
+  },
+  topContainer: {
+    flexDirection: 'row',
+    marginTop: 30,
+    marginBottom: 15,
+  },
+  person: {
+    backgroundColor: 'white',
+    borderRadius: 20,
+  },
+  button: {
+    marginVertical: 20,
+  },
 });

@@ -9,7 +9,6 @@ import BubbleBottomLeft from '../../../assets/bubble-questionScreenBottomLeft.sv
 import BubbleBottomRight from '../../../assets/bubble-questionScreenBottomRight.svg';
 import BubbleMiddleRight from '../../../assets/bubble-questionScreenMiddleRight.svg';
 import style from './style';
-import {ThemeProvider} from '@react-navigation/native';
 
 interface QuizProps {
   questions: Array<any> | null;
@@ -28,7 +27,7 @@ class Quiz extends React.Component<QuizProps, QuizState> {
     };
   }
 
-  get questionTitle() {
+  private get questionTitle() {
     const {questions} = this.props;
     const {currentQuestion} = this.state;
     return (
@@ -38,7 +37,7 @@ class Quiz extends React.Component<QuizProps, QuizState> {
     );
   }
 
-  get questionText() {
+  private get questionText() {
     const {questions} = this.props;
     const {currentQuestion} = this.state;
     return (
@@ -71,21 +70,14 @@ class Quiz extends React.Component<QuizProps, QuizState> {
         <Text style={style.title} numberOfLines={2} lineBreakMode="middle">
           {this.questionTitle}
         </Text>
-        <View
-          style={{
-            marginLeft: 35,
-            marginVertical: 15,
-            alignSelf: 'center',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
+        <View style={style.topContainer}>
           <ProgressTracker
             current={this.state.currentQuestion}
             total={this.props.questions?.length}
           />
           <Text style={style.question}>{this.questionText}</Text>
         </View>
-        <View style={{marginTop: 50}}>
+        <View style={style.buttonContainer}>
           <Button type="true" onPress={() => this.answer(true)} />
           <Button type="false" onPress={() => this.answer(false)} />
         </View>
