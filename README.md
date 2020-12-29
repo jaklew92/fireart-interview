@@ -23,3 +23,4 @@ commands in the aforementioned directory.
 Assumptions made during development of the project:
 1. A few functionalities (navigation, SVG loading, linear gradient on the buttons) were impossible to do from scratch in a reasonable amount of time. 3rd party libs were used to achieve these goals.
 2. It was assumed that on the 3rd screen, the number of stars is constant (10).
+3. iOS project was run on macOS Catalina with XCode 12.1 - it's assumed that this is the minimal requirement to run it.
